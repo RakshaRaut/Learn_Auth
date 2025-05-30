@@ -2,7 +2,7 @@
 
 ##  Getting Started
 
-### 1. Initialize project
+1. Initialize project
 
 ```bash
 npm init -y
@@ -36,5 +36,17 @@ npm install express cookie-parser mailtrap bcryptjs dotenv jsonwebtoken mongoose
 
     crypto
     Built-in Node.js module used for encryption, hashing, and other cryptographic operations.
-```
 
+    nodemon 
+    Nodemon is a utility that monitors changes in your Node.js project files and automatically restarts the server when any file is update    
+
+
+
+    ```
+3. Backend setup:
+ make index.js/server.js/ file
+
+4. Database setup:
+   you can have an idea from here,
+        https://www.youtube.com/watch?v=pmvEgZC55Cg
+  

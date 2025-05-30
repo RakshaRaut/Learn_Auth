@@ -1,12 +1,17 @@
-// const express = require('express');        (it's a common js)
-import express from "express"; //#(ES Modules)Inorder to do this u need to add "type": "module", in package.json
+import dotenv from "dotenv";
+dotenv.config();
 
-const app = express();
+import express from "express";
+import { connectDB } from "./db/connectDB.js";
 
-app.get("/", (req, res) => {
-  res.send("Hello World 123");
-});
+import authRoutes from "./routes/auth.route.js";
 
-app.listen(3000, () => {
-  console.log("server is running on port 3000");
+const app = express(); 
+const PORT = process.env.PORT || 5000;
+
+app.use("/api/auth", authRoutes)
+
+app.listen(PORT, async () => {
+  await connectDB();
+  console.log(" Server running on port:", PORT);
 });
